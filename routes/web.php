@@ -36,14 +36,3 @@ Route::get('/CrearPrestamo', 'App\Http\Controllers\Auth\AuthController@CrearPres
 Route::get('/AgregarUsuario', 'App\Http\Controllers\Auth\AuthController@AgregarUsuario')->name('AgregarUsuario');
 
 
-
-//auth
-/**Route::prefix('auth')->group(function(){
-    Route::get('login', function(){
-        return 'hello word';
-    })->name('login');
-        Route::get('login',[AuthController::class 'login'])->name('login');
-
-});*/
-
-//route::get('auth/login',[AuthController::class,'login'])->name('auth.login');
