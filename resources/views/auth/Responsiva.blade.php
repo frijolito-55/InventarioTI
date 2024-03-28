@@ -11,6 +11,7 @@
             padding-bottom: 30%;
             /* Salto de línea con relleno inferior */
         }
+
         .espacio2 {
             padding-bottom: 3%;
         }
@@ -28,24 +29,42 @@
                         margin-top:5%;
                     }
                 </style>-->
-                <div class="container" style="margin-top:8%">
-                    <table cellpadding="0" cellspacing="0" border="0" width="900" align="center" datasrc="#myxml"
-                        id="resguardos" style="font-family: sans-serif;">
+                <div>
+                    <style>
+                        .img {
+                            max-width: 90%;
+                            /* Ajustar imagen al ancho del contenedor */
+                            height: auto;
+                            /* Mantener proporción de la imagen */
+                        }
+
+                        .contenedor {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding-top: 8%;
+                        }
+                    </style>
+                    <div class="contenedor">
+                        <img class="img" src="{{ asset('img/icono.png') }}">
+                    </div>
+                </div>
+
+                <div class="container mt-2">
+                    <table cellpadding="0" cellspacing="0" border="0" width="900" align="center" id="resguardos"
+                        style="font-family: sans-serif;">
                         <thead>
-                            <tr class="texto" style="text-transform:uppercase;font-weight:bold;">
-                                <td id="encabezado" width="250px"
-                                    style="border-bottom:2px #dddddd solid;border-top:2px #dddddd solid;padding-left:5;">
-                                    <img width="230" height="38" style="padding-top: 1px; padding-bottom: 10px"
-                                        src="{{ asset('img/icono.png') }}">
-                                </td>
+                            <tr class="texto" style="text-transform: uppercase; font-weight: bold;">
                                 <td id="encabezado"
-                                    style="border-bottom:2px #dddddd solid;border-top:2px #dddddd solid;padding-left:5;">
-                                    <span style="font-size: large;  padding-LEFT:10px ">tecnologia de la
-                                        información</span><br>
-                                    <span style="font-size: large; ">Resguardo de equipo de cómputo</span><br>
+                                    style="border-bottom: 2px #dddddd solid; border-top: 2px #dddddd solid;">
+                                    <div class="text-center">
+                                        <h2 class="mb-0">Tecnología de la Información</h2>
+                                        <h3 class="mb-3">Resguardo de Equipo de Cómputo</h3>
+                                    </div>
                                 </td>
                             </tr>
                         </thead>
+                    </table>
                 </div>
             </div>
             <div class="container mt-4">
@@ -53,10 +72,10 @@
                     <thead>
                         <div class="espacio2">
                             <tr>
-                                <th>NOMBRE</th>
-                                <th>CEDIS</th>
-                                <th>DEPARTAMENTO</th>
-                                <th>NOMBRE EQUIPO:</th>
+                                <th>SANER ROLDAN BALCAZAR VELAZQUEZ</th>
+                                <th>MID</th>
+                                <th>SOPORTE TECNICO</th>
+                                <th>NOMBRE EQUIPO:SABALCAZAR</th>
                             </tr>
                         </div>
                 </table>
