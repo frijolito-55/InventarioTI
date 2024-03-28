@@ -35,6 +35,9 @@ class AuthController extends Controller
     public function Resguardo(){
         return view('auth.Resguardo');
     }
+    public function Responsiva(){
+        return view ('auth.Responsiva');
+    }
     //ESTE ES PRESTAMO DE EQUIPOS
     public function Prestamo(){
         return view('auth.Prestamo');
