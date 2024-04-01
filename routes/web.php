@@ -31,7 +31,6 @@ Route::get('/TansferenciaFiltrar', 'App\Http\Controllers\TransferenciaController
 Route::get('/AceptarTransferencia', 'App\Http\Controllers\AceptarTransferencia@AceptarTransferencia')->name('AceptarTransferencia');
 Route::get('/DevolverDatos', 'App\Http\Controllers\AceptarTransferencia@DevolverDatos')->name('DevolverDatos');
 
-
 Route::get('/Resguardo', 'App\Http\Controllers\Auth\AuthController@Resguardo')->name('Resguardo');
 Route::get('/Prestamo', 'App\Http\Controllers\Auth\AuthController@Prestamo')->name('Prestamo');
 Route::get('/ReportePrestamo', 'App\Http\Controllers\Auth\AuthController@ReportePrestamo')->name('ReportePrestamo');
@@ -41,15 +40,3 @@ Route::get('/CrearResguardo', 'App\Http\Controllers\Auth\AuthController@CrearRes
 Route::get('/CrearPrestamo', 'App\Http\Controllers\Auth\AuthController@CrearPrestamo')->name('CrearPrestamo');
 Route::get('/AgregarUsuario', 'App\Http\Controllers\Auth\AuthController@AgregarUsuario')->name('AgregarUsuario');
 
-
-
-//auth
-/**Route::prefix('auth')->group(function(){
-    Route::get('login', function(){
-        return 'hello word';
-    })->name('login');
-        Route::get('login',[AuthController::class 'login'])->name('login');
-
-});*/
-
-//route::get('auth/login',[AuthController::class,'login'])->name('auth.login');
