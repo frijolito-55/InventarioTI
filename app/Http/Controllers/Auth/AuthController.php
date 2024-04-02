@@ -41,6 +41,9 @@ class AuthController extends Controller
     public function VistaResguardo(){
         return view ('auth.VistaResguardo');
     }
+    public function VistaPrestamo(){
+        return view ('auth.VistaPrestamo');
+    }
     //ESTE ES PRESTAMO DE EQUIPOS
     public function Prestamo(){
         return view('auth.Prestamo');
@@ -63,6 +66,9 @@ class AuthController extends Controller
     public function ControlEquipo(){
         return view('auth.ControlEquipo');
     }
+    public function ActualizarControl(){
+        return view('auth.ActualizarControl');
+    }
     public function CrearResguardo(){
         return view('auth.CrearResguardo');
     }
@@ -71,6 +77,9 @@ class AuthController extends Controller
     }
     public function AgregarUsuario(){
         return view('auth.AgregarUsuario');
+    }
+    public function AsignarEquipo(){
+        return view('auth.AsignarEquipo');
     }
 
 }

@@ -201,7 +201,7 @@
                                         <td>CN099WJF728725C3A32UA00	</td>
                                         <td>MPG</td>
                                         <td>MID</td>
-                                        <td>
+                                        <td class="text-center">
                                             <i class="fa-solid fa-circle-check fa-lg" type="submit"></i>
                                         </td>
                                     </tr>

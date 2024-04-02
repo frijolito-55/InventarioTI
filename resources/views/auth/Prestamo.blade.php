@@ -139,7 +139,7 @@
                                 Contro de Prestamo
                             </h5>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end sidebar-link">
-                                <a href="{{ route ('CrearPrestamo')}}">Crear Prestamo</a>
+                                <a class="btn btn-success" href="{{ route ('CrearPrestamo')}}" role="button">CREAR PRESTAMO</a>
                             </div>
                         </div>
                         
@@ -197,8 +197,10 @@
                                         <td>20-02-2024</td>
                                         <td class="text-center">2</td>
                                         <td class="text-center">
-                                            <i class="fa-solid fa-eye fa-lg" type="submit"></i>
-                                        </td>                                    
+                                            <a href="{{ route('VistaPrestamo') }}">
+                                                <i class="fa-solid fa-eye fa-lg"></i>
+                                            </a>
+                                        </td>                                   
                                     </tr>
                                 </tbody>
                             </table>

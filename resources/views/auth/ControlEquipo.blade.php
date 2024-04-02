@@ -197,9 +197,10 @@
                                         <td>OPTIPLEX 780</td>
                                         <td>BAJA</td>
                                         <td>F64V484</td>
-                                        <td>
-                                            <i class="fa-solid fa-pencil fa-lg" type="submit"></i>
-                                            
+                                        <td class="text-center">
+                                            <a href="{{ route ('ActualizarControl')}}">
+                                                <i class="fa-solid fa-pencil fa-lg" type="submit"></i>
+                                            </a>                              
                                             <i class="fa-solid fa-trash fa-lg" type="submit"></i>
                                         </td>
                                     </tr>

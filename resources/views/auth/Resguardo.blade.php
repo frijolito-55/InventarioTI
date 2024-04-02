@@ -190,7 +190,7 @@
                                 </thead>
                                 <!--ACA ESTA EL EJEMPLO DE COMO SE VERA LA TABLA-->
                                 <tbody>
-                                    < <td>MID</td>
+                                    <td>MID</td>
                                     <td>Desarrollo</td>
                                     <td>Raul lopez Barra</td>
                                     <td>Ralopez</td>

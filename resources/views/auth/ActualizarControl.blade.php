@@ -2,6 +2,7 @@
 <html lang="es" data-bs-theme="dark">
 
 <head>
+    <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/prueba.css') }}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -136,7 +134,7 @@
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
-                        <h4>CREAR NUEVO PRESTAMO</h4>
+                        <h4>Actualizar Equipo General</h4>
                     </div>
                     <!-- Table Element -->
                     <div class="card border-0">
@@ -147,94 +145,165 @@
                         </div>
                         <div class="card-body">
                             <table class="table">
+                                <div class="card boder-0">
+                                    <div class="card-header">
+                                        <h5 class="card-title">
+                                            Datos Genereales
+                                        </h5>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-3">
-                                        <form class="d-flex">
-                                            <input class="form-control form-control-sm me-2"
-                                            type="search" placeholder="NUMERO DE COLABORADOR" aria-label="Search" style="width: 220px, 
-                                            height 150px">
-                                        </form>
-                                    </div>
-                                    <div class="col-3">
-                                        <form class="d-flex">
-                                            <input class="form-control form-control-sm me-2"
-                                            type="search" placeholder="NOMBRE" aria-label="Search" style="width: 220px, 
-                                            height 150px">
-                                        </form>
-                                    </div>
-                                    
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-3">
-                                        <form class="d-flex">
-                                            <input id="fechaPrestamo" class="form-control form-control-sm me-2"
-                                            type="search" placeholder="FECHA DE PRESTAMO" aria-label="Search" style="width: 220px, 
-                                            height 150px">
-                                        </form>
-                                    </div>
-                                    <div class="col-3">
-                                        <form class="d-flex">
-                                            <input id="fechaDevolucion" class="form-control form-control-sm me-2"
-                                            type="text" placeholder="FECHA DE DEVOLUCIÓN" aria-label="Search" style="width: 220px;">
-                                        </form>
-                                    </div>
-                                        
-                                    <div class="col-3">
-                                        <form class="d-flex">
-                                            <input class="form-control form-control-sm me-2"
-                                            type="search" placeholder="NOMBRE DEL EQUIPO" aria-label="Search" style="width: 220px, 
-                                            height 150px">
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-3">
-                                        <label class="visually-hidden" for="autoSizingSelect">NOMBRE DE LA PLATAFORMA</label>
+                                        <!-- Contenido del elemento izquierdo -->
+                                        <label class="visually-hidden" for="autoSizingSelect">TIPO</label>
                                         <select class="form-select" id="autoSizingSelect">
-                                            <option selected>SELECCIONE LA PLATAFORMA</option>
+                                            <option selected>TIPO</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- Contenido del elemento derecho -->
+                                        <label class="visually-hidden" for="autoSizingSelect">MARCA</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                            <option selected>MARCA</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- Contenido del elemento derecho -->
+                                        <label class="visually-hidden" for="autoSizingSelect">MODELO</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                            <option selected>MODELO</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- Contenido del elemento derecho -->
+                                        <label class="visually-hidden" for="autoSizingSelect">NÚMERO DE SERIE</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                            <option selected>NÚMERO DE SERIE</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-8">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">DESCRIPCIÓN</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                                <div class="row mt-3">
+                                    <div class="col-3 pd-2">
+                                        <label class="visually-hidden" for="autoSizingSelect">HOTEL</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                            <option selected> HOTEL</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- Contenido del elemento derecho -->
+                                        <label class="visually-hidden" for="autoSizingSelect">ID ESTATUS</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                            <option selected>ID ESTATUS</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- Contenido del elemento derecho -->
+                                        <label class="visually-hidden" for="autoSizingSelect">SISTEMA
+                                            OPERATIVO</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                            <option selected>SISTEMA OPERATIVO</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- Contenido del elemento derecho -->
+                                        <label class="visually-hidden" for="autoSizingSelect">MEMORIA RAM</label>
+                                        <select class="form-select" id="autoSizingSelect">
+                                            <option selected>MEMORIA RAM</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-3 pd-2">
+                                            <label class="visually-hidden" for="autoSizingSelect">PROCESADOR</label>
+                                            <select class="form-select" id="autoSizingSelect">
+                                                <option selected> PROCESADOR</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-3">
+                                            <!-- Contenido del elemento derecho -->
+                                            <label class="visually-hidden" for="autoSizingSelect">TIPO DE DISCO
+                                                DURO</label>
+                                            <select class="form-select" id="autoSizingSelect">
+                                                <option selected>TIPO DE DISCO DURO</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-auto mt-3">
-                                    <button type="submit" class="btn btn-success">CREAR</button>
-                                </div>
-                            
-                            </table>
                         </div>
+                        <br>
+                        <div class="card boder-0">
+                            <div class="card-header">
+                                <h5 class="card-title">
+                                    Datos de Facturas
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                Seleccionar si el equipo tiene más de 3 años
+
+                            </label>
+                          </div>
+                        <div class="col-auto mt-3">
+                            <button type="submit" class="btn btn-success">GUARDAR</button>
+                        </div>
+                        </table>
                     </div>
                 </div>
-            </main>
-            <a href="#" class="theme-toggle">
-                <i class="fa-regular fa-moon"></i>
-                <i class="fa-regular fa-sun"></i>
-            </a>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row text-muted">
-                        <div class="col-6 text-start">
-                            <p class="mb-0">
-                                <a href="#" class="text-muted">
-                                    <strong>@THEPALACECOMPANY</strong>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
+        </main>
+        <a href="#" class="theme-toggle">
+            <i class="fa-regular fa-moon"></i>
+            <i class="fa-regular fa-sun"></i>
+        </a>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6 text-start">
+                        <p class="mb-0">
+                            <a href="#" class="text-muted">
+                                <strong>@THEPALACECOMPANY</strong>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js/prueba.js') }}"></script>
-    <script src="{{ asset ('js/date.js')}}"></script>
 </body>
 
 </html>
