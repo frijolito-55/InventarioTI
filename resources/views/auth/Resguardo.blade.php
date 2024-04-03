@@ -154,16 +154,16 @@
                                         </P>
                                             <!--ESTE ES EL BOTON DESPLEGABLE-->
                                             <div class="dropup-center dropup"></div>
-                                            <select class="form-select" aria-label="size 3 select example">
-                                                <option selected></option>
-                                                <option value="1">One</option>
+                                            <select class="form-select" aria-label="size 3 select example" id="hotelSelected" name="hotel">
+                                                <option selected value=""></option>
+                                                
                                             </select>
                                         </th>
                                         <th scope="col">DEPARTAMENTO <p></p>
                                             <div class="dropup-center dropup"></div>
-                                            <select class="form-select" aria-label="size 3 select example">
-                                                <option selected></option>
-                                                <option value="1">One</option>
+                                            <select class="form-select" aria-label="size 3 select example" id="departamentoSelected" name="depa">
+                                                <option selected value=""></option>
+                                                
                                             </select>
                                         </th>
                                         <th scope="col">NOMBRE <p>
@@ -189,7 +189,7 @@
                                     </tr>
                                 </thead>
                                 <!--ACA ESTA EL EJEMPLO DE COMO SE VERA LA TABLA-->
-                                <tbody>
+                                <tbody id="contenido">
                                     < <td>MID</td>
                                     <td>Desarrollo</td>
                                     <td>Raul lopez Barra</td>
@@ -197,8 +197,9 @@
                                     <td class="text-center">4</td>
                                     <td class="text-center">
                                         <a href="{{ route('VistaResguardo') }}">
-                                            <i class="fa-solid fa-eye fa-lg"></i>
+                                            <i class="fa-solid fa-eye fa-lg"></i>                        
                                         </a>
+                                        
                                     </td>
                                 </tbody>
                             </table>
@@ -225,6 +226,11 @@
             </footer>
         </div>
     </div>
+    <script>
+        var urlVistaResguardo = "{{ route('VistaResguardo') }}";
+    </script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('js/filtroResguardo.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js/prueba.js') }}"></script>
 </body>

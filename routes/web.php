@@ -31,7 +31,9 @@ Route::get('/TansferenciaFiltrar', 'App\Http\Controllers\TransferenciaController
 Route::get('/AceptarTransferencia', 'App\Http\Controllers\AceptarTransferencia@AceptarTransferencia')->name('AceptarTransferencia');
 Route::get('/DevolverDatos', 'App\Http\Controllers\AceptarTransferencia@DevolverDatos')->name('DevolverDatos');
 
-Route::get('/Resguardo', 'App\Http\Controllers\Auth\AuthController@Resguardo')->name('Resguardo');
+Route::get('/Resguardo', 'App\Http\Controllers\ResguardoController@Resguardo')->name('Resguardo');
+Route::get('/VistaResguardo', 'App\Http\Controllers\VistaResguardoController@VistaResguardo')->name('VistaResguardo');
+
 Route::get('/Prestamo', 'App\Http\Controllers\Auth\AuthController@Prestamo')->name('Prestamo');
 Route::get('/ReportePrestamo', 'App\Http\Controllers\Auth\AuthController@ReportePrestamo')->name('ReportePrestamo');
 Route::get('/ReporteResguardo', 'App\Http\Controllers\Auth\AuthController@ReporteResguardo')->name('ReporteResguardo');
@@ -39,4 +41,9 @@ Route::get('/SinAsignar', 'App\Http\Controllers\Auth\AuthController@SinAsignar')
 Route::get('/CrearResguardo', 'App\Http\Controllers\Auth\AuthController@CrearResguardo')->name('CrearResguardo');
 Route::get('/CrearPrestamo', 'App\Http\Controllers\Auth\AuthController@CrearPrestamo')->name('CrearPrestamo');
 Route::get('/AgregarUsuario', 'App\Http\Controllers\Auth\AuthController@AgregarUsuario')->name('AgregarUsuario');
+Route::get('/Responsiva', 'App\Http\Controllers\Auth\AuthController@Responsiva')->name('Responsiva');
+
+
+Route::get('/mostrarDatosResguardo', 'App\Http\Controllers\ResguardoController@mostrarDatosResguardo')->name('mostrarDatosResguardo');
+
 

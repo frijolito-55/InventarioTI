@@ -12,9 +12,6 @@ use App\Models\hotel;
 
 class TransferenciaController extends Controller
 {
-    //
-
-
     public function TransferenciaHotel(){
         return view('auth.TransferenciaHotel');
     }

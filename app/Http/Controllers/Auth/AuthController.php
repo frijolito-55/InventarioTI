@@ -72,10 +72,6 @@ class AuthController extends Controller
         return view('auth.CapturaInventario');
     }
 
-
-    public function Resguardo(){
-        return view('auth.Resguardo');
-    }
     //ESTE ES PRESTAMO DE EQUIPOS
     public function Prestamo(){
         return view('auth.Prestamo');
@@ -99,11 +95,16 @@ class AuthController extends Controller
     public function CrearResguardo(){
         return view('auth.CrearResguardo');
     }
+
     public function CrearPrestamo(){
         return view('auth.CrearPrestamo');
     }
     public function AgregarUsuario(){
         return view('auth.AgregarUsuario');
     }
+    public function Responsiva(){
+        return view('auth.Responsiva');
+    }
+
 
 }
