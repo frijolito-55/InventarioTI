@@ -13,7 +13,7 @@
                     Control de Equipos en Inventario
                 </h5>
             </div>
-
+            
         </div>
         <div class="card border-0">
             <div class="card-body">
@@ -53,13 +53,12 @@
                             </th>
                             <th scope="col">NÚMERO DE SERIE
                                 <form class="d-flex">
-                                    <input class="form-control form-control-sm me-2" type="search" placeholder=""
-                                        aria-label="Search" style="width: 120px;">
+                                    <input class="form-control form-control-sm me-2" type="search" placeholder="" aria-label="Search" style="width: 120px;">
                                 </form>
                             </th>
                             <th scope="col">Acciones
                                 <p>
-                                    <br>
+                                <br>
                             </th>
                         </tr>
                     </thead>
@@ -73,9 +72,9 @@
                             <td>BAJA</td>
                             <td>F64V484</td>
                             <td class="text-center">
-                                <a href="{{ route('ActualizarControl') }}">
+                                <a href="{{ route ('ActualizarControl')}}">
                                     <i class="fa-solid fa-pencil fa-lg" type="submit"></i>
-                                </a>
+                                </a>                              
                                 <i class="fa-solid fa-trash fa-lg" type="submit"></i>
                             </td>
                         </tr>
