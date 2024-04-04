@@ -22,33 +22,32 @@
                         <tr>
                             <th scope="col">
                                 <!--ESTE ES EL BOTON DESPLEGABLE-->
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected>HOTEL</option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selecthotel" name="hotel">
+                                    <option selected value="">HOTEL</option>
+                                    
                                 </select>
                             </th>
                             <th scope="col">
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected>TIPO</option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectTipo" name="tipo">
+                                    <option selected value="">TIPO</option>
+                                    
                                 </select>
                             </th>
                             <th scope="col">
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected>MARCA</option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectMarca" name="marca">
+                                    <option selected value="">MARCA</option>
+                                    
                                 </select>
                             </th>
                             <th scope="col">
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected>MODELO</option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectModelo" name="modelo">
+                                    <option selected value="">MODELO</option>
                                 </select>
                             </th>
                             <th scope="col">
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected>ESTADO</option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectEstado" name="estado">
+                                    <option selected value="">ESTADO</option>
+                                    
                                 </select>
                             </th>
                             <th scope="col">NÚMERO DE SERIE
@@ -84,5 +83,6 @@
         </div>
     </div>
 </main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('js/filtro.js') }}"></script>
 @endsection
-<script></script>

@@ -23,21 +23,17 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">NOMBRE <P>
-                                HOTEL
-                            </P>
+                            <th scope="col">NOMBRE <P>HOTEL</P>
                                 <!--ESTE ES EL BOTON DESPLEGABLE-->
                                 <div class="dropup-center dropup"></div>
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected></option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="hotelSelected" name="hotel">
+                                    <option selected value=""></option>
                                 </select>
                             </th>
                             <th scope="col">DEPARTAMENTO <p></p>
                                 <div class="dropup-center dropup"></div>
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected></option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="departamentoSelected">
+                                    <option selected value=""></option>
                                 </select>
                             </th>
                             <th scope="col">NOMBRE <p>
@@ -63,7 +59,7 @@
                         </tr>
                     </thead>
                     <!--ACA ESTA EL EJEMPLO DE COMO SE VERA LA TABLA-->
-                    <tbody>
+                    <tbody id="contenido">
                         <td>MID</td>
                         <td>Desarrollo</td>
                         <td>Raul lopez Barra</td>
@@ -80,5 +76,7 @@
         </div>
     </div>
 </main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('js/filtroResguardo.js') }}"></script>
 @endsection
            

@@ -22,23 +22,21 @@
                         <tr>
                             <th scope="col">TIPO
                                 <div class="dropup-center dropup"></div>
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected></option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectTipo" name="tipo">
+                                    <option selected value=""></option>
+                                    
                                 </select>
                             </th>
                             <th scope="col">MARCA
                                 <div class="dropup-center dropup"></div>
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected></option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectMarca" name="marca">
+                                    <option selected value=""></option>
                                 </select>
                             </th>
                             <th scope="col">MODELO
                                 <div class="dropup-center dropup"></div>
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected></option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectModelo" name="modelo">
+                                    <option selected value=""></option>
                                 </select>
                             </th>
                             <th scope="col">NÚMERO DE SERIE
@@ -48,16 +46,14 @@
                             </th>
                             <th scope="col">HOTEL
                                 <div class="dropup-center dropup"></div>
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected></option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="selectHotel" name="hotel">
+                                    <option selected value=""></option>
                                 </select>
                             </th>
                             <th scope="col">NOMBRE <p> HOTEL DESTINO</p>
                                 <div class="dropup-center dropup"></div>
-                                <select class="form-select" aria-label="size 3 select example">
-                                    <option selected></option>
-                                    <option value="1">One</option>
+                                <select class="form-select" aria-label="size 3 select example" id="hotelDestino" name="destino">
+                                    <option selected value=""></option>
                                 </select>
                             </th>
                             <th scope="col">Acciones
@@ -67,7 +63,7 @@
                         </tr>
                     </thead>
                     <!--ACA ESTA EL EJEMPLO DE COMO SE VERA LA TABLA-->
-                    <tbody>
+                    <tbody id="contenido">
                         <tr>
                             <td>MONITOR</td>
                             <td>DELL</td>
@@ -85,5 +81,7 @@
         </div>
     </div>
 </main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('js/transferenciaAut.js') }}"></script>
 @endsection
             
