@@ -15,10 +15,6 @@ class ResguardoController extends Controller
     public function Resguardo(){
         return view('auth.Resguardo');
     }
-    public function VistaResguardo(){
-        return view('auth.VistaResguardo');  
-    }
-    
     public function mostrarDatosResguardo(Request $request){
         $query = $this->query();
         $hoteles = hotel::select('nombreHotel')->get();

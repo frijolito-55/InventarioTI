@@ -27,22 +27,31 @@
                     </thead>
                     <!--ACA ESTA EL EJEMPLO DE COMO SE VERA LA TABLA-->
                     <tbody>
+                        @foreach($prestamos as $prestamo)
                         <tr>
-                            <td>Arturo Lopez Estrada</td>
-                            <td>11-02-2024</td>
-                            <td>11-04-2024</td>
-                            <td>Luis Torrez Cruz</td>
-                            <td>3 días</td>
-                            <td>activo</td>
+                            <td>{{$prestamo->usuarioNombre .' '. $prestamo->usuarioApellidoPat.' '.$prestamo->usuarioApellidoMat}}</td>
+                            <td>{{$prestamo->fecha_prestamo}}</td>
+                            <td>{{$prestamo->fecha_devolucion}}</td>
+                            <td>{{$prestamo->nombre}}</td>
+                            <td>
+                                @php
+                                // Calcula el tiempo restante en días
+                                $fechaDevolucion = new DateTime($prestamo->fecha_devolucion);
+                                $fechaActual = new DateTime();
+                                $diferencia = $fechaActual->diff($fechaDevolucion);
+                                $diasRestantes = $diferencia->format('%r%a');
+
+                                // Determina el estado basado en los días restantes
+                                if ($diasRestantes > 0) {
+                                    echo $diasRestantes . " días restantes";
+                                } else {
+                                    echo "Vencido";
+                                }
+                            @endphp
+                            </td>
+                            <td><button type="button" class="btn btn-outline-secondary">Recuoerar</button></td>
                         </tr>
-                        <tr>
-                            <td>Arturo Lopez Estrada</td>
-                            <td>11-02-2024</td>
-                            <td>11-04-2024</td>
-                            <td>Luis Torrez Cruz</td>
-                            <td>3 días</td>
-                            <td>activo</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

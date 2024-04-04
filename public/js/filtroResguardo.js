@@ -88,7 +88,7 @@ function llenarTabla(equipos) {
             <td>${equipo.nombreEquipo}</td>
             <td>2</td>
             <td class="text-center">
-                <a href="#" class="ver-resguardo">
+                <a href="#" class="ver-resguardo" data-id="${equipo.id_resguardo}">
                     <i class="fa-solid fa-eye fa-lg"></i>
                 </a>
             </td>
@@ -100,8 +100,8 @@ function llenarTabla(equipos) {
 // Función para manejar el clic en el enlace "ver-resguardo"
 $(document).on('click', '.ver-resguardo', function(e) {
     e.preventDefault(); // Evitar que el enlace siga su URL por defecto
-
+    var idEquipo = $(this).data('id');
     // Redirigir a la vista VistaResguardo
-    window.location.href = urlVistaResguardo;
+    window.location.href = urlVistaResguardo + '?id=' + idEquipo;
 });
 
