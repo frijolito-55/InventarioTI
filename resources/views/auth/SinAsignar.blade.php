@@ -1,1 +1,5 @@
-<h1>SIN ASIGNAR</h1>
+@extends('layouts.Base')
+
+@section('SinAsignar')
+    
+@endsection
