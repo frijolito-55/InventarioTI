@@ -48,9 +48,9 @@
                         </div>
                         <div class="col-3">
                             <!-- Contenido del elemento derecho -->
-                            <label class="visually-hidden" for="autoSizingSelect">MODELO</label>
+                            <label class="visually-hidden" for="autoSizingSelect">PROVEEDOR</label>
                             <select class="form-select" id="autoSizingSelect">
-                                <option selected>MODELO</option>
+                                <option selected>PROVEEDOR</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>

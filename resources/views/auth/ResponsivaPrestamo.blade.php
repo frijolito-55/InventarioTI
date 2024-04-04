@@ -76,6 +76,11 @@
                                 <th>MID</th>
                                 <th>SOPORTE TECNICO</th>
                                 <th>NOMBRE EQUIPO:SABALCAZAR</th>
+                              
+                            </tr>
+                            <tr>
+                                <th>FECHA DE PRESATMO:<th>2024-01-30</th></th>
+                                <th>FECHA DE DEVOLUCIÓN:<th>2024-01-30</th></th>
                             </tr>
                         </div>
                 </table>

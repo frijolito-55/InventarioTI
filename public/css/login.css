@@ -5,7 +5,7 @@
     font-family: "Poppins", sans-serif;
 }
 .wrapper {
-    background: #dedddda5;
+    background: #acacacb9;
     padding: 0 20px 0 20px;
 }
 .main {
@@ -16,8 +16,8 @@
 }
 .side-image {
     background-image: url("{{ asset('img/logo.png')}}");
-    background-position: center; /* Agregar esta línea */
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px 0 0 10px;
     position: relative;
@@ -46,30 +46,26 @@ i {
 }
 .right {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 .input-box {
     width: 330px;
     box-sizing: border-box;
-    text-align: center; /* Añadir alineación centrada */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
 }
- 
 img {
-    width: 650px;
-    text-align: center;
+    width: 400px;
     position: absolute;
-    top: 20px;
-    left: 17%;
+    top: 30px;
+    left: 30px;
 }
 .input-box header {
     font-weight: 700;
     text-align: center;
     margin-bottom: 45px;
-}.input-field {
+}
+.input-field {
     display: flex;
     flex-direction: column;
     position: relative;

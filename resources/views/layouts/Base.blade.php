@@ -2,7 +2,7 @@
 <html lang="es" data-bs-theme="dark">
 
 <head>
-    <link rel="icon" href="{{ asset('img/Icono.ico') }}" type="image/png">
+    <link rel="icon" href="{{ asset('img/icono.png') }}" type="image/png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/prueba.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 </head>
 
 <body
@@ -88,7 +91,7 @@
                         </a>
                         <ul id="licencia" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">op</a>
+                                <a href="{{ route ('Licencias')}}" class="sidebar-link">Control de Licencias</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">op</a>
@@ -128,6 +131,7 @@
                     </ul>
                 </div>
             </nav>
+            
             @yield('AgregarUsuario') @section('AgregarUsuario')
             @yield('contraseña') @section('contraseña')
 
@@ -141,13 +145,14 @@
             @yield('VistaResguardo') @section('VistaResguardo')
             @yield('CrearResguardo') @section('CrearResguardo')
             @yield('Prestamo') @section('Prestamo')
+            @yield('ActualizarResguardo') @section('ActualizarResguardo')
             @yield('CrearPrestamo') @section('CrearPrestamo')
             @yield('VistaPrestamo') @section('VistaPrestamo')
+            @yield('ActualizarPrestamo') @section('ActualizarPrestamo')
             @yield('ReporteResguardo') @section('ReporteResguardo')
             @yield('ReportePrestamo') @section('ReportePrestamo')
             @yield('SinAsignar') @section('SinAsignar')
-
-
+            @yield('Licencias') @section('Licencias')
             <a href="#" class="theme-toggle">
                 <i class="fa-regular fa-moon"></i>
                 <i class="fa-regular fa-sun"></i>
@@ -170,7 +175,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js/prueba.js') }}"></script>
     <script src=" {{ asset('js/asignarequipo.js') }}"></script>
-
+    <script src="{{ asset ('js/date.js') }}"></script>
 
 </body>
 
