@@ -43,6 +43,10 @@ Route::get('/ActualizarResguardo', 'App\Http\Controllers\Auth\AuthController@Act
 Route::get('/ActualizarPrestamo', 'App\Http\Controllers\Auth\AuthController@ActualizarPrestamo')->name('ActualizarPrestamo');
 Route::get('/ResponsivaPrestamo', 'App\Http\Controllers\Auth\AuthController@ResponsivaPrestamo')->name('ResponsivaPrestamo');
 Route::get('/Licencias', 'App\Http\Controllers\Auth\AuthController@Licencias')->name('Licencias');
+Route::get('/ControlLicencia', 'App\Http\Controllers\Auth\AuthController@ControlLicencia')->name('ControlLicencia');
 Route::get('/CrearLicencia', 'App\Http\Controllers\Auth\AuthController@CrearLicencia')->name('CrearLicencia');
+Route::get('/Asignados', 'App\Http\Controllers\Auth\AuthController@Asignados')->name('Asignados');
+Route::get('/VistaLicencia', 'App\Http\Controllers\Auth\AuthController@VistaLicencia')->name('VistaLicencia');
+
 
 

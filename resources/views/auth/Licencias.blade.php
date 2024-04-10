@@ -12,6 +12,9 @@
                 <h5 class="card-title">
                     Administrador de Lincias
                 </h5>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end sidebar-link">
+                    <a class="btn btn-success" href="{{ route ('CrearLicencia')}}" role="button">AGREGAR LICENCIA</a>
+                </div>
             </div>
             <div class="card-body">
                 <table class="table">

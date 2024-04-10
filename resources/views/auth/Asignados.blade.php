@@ -1,43 +1,62 @@
 @extends('layouts.Base')
 
-@section('dashboard')
+@section('Asignados')
 <main class="content px-3 py-2">
     <div class="container-fluid">
         <div class="mb-3">
-            <h4>Préstamos de Equipos</h4>
+            <h4>Licencias</h4>
         </div>
         <!-- Table Element -->
         <div class="card border-0">
             <div class="card-header">
                 <h5 class="card-title">
-                    Préstamos proximos a vencer
+                    Licencias Asignadas
                 </h5>
             </div>
+            
+        </div>
+        <div class="card border-0">
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <tr class="text-center">
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Fecha de Préstamos</th>
-                            <th scope="col">Fecha de Devolución</th>
-                            <th scope="col">Nombre de Ingeniero de Soporte</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Acción</th>
+                        <tr>
+                            <th scope="col">
+                                <P>NOMBRE</P>
+                            </th>
+                            <th scope="col">
+                                <P>DEPARTAMENTO</P>
+                            </th>
+                            <th scope="col">
+                               <p>USUARIO</p>
+                            </th>
+                            <th scope="col">
+                                FECHA<p> DE ASIGNACIÓN</p> 
+                            </th>  
+                            <th scope="col">
+                                FECHA<p> DE VENCIMIENTO</p>    
+                            </th> 
+                            <th scope="col">
+                                LICENCIAS <p>ASIGNADAS</p>
+                            </th>
+                            <th scope="col">ACCIONES
+                                <p></p>
+                            </th>
                         </tr>
                     </thead>
                     <!--ACA ESTA EL EJEMPLO DE COMO SE VERA LA TABLA-->
                     <tbody>
                         <tr>
-                            <td>Arturo Lopez Estrada</td>
-                            <td>11-02-2024</td>
-                            <td>11-04-2024</td>
-                            <td>Luis Torrez Cruz</td>
-                            <td>3 días</td>
+                            <td>Raul lopez Barra</td>
+                            <td>Desarrollo</td>
+                            <td>RABARRA</td>
+                            <td>11-02-2023</td>
+                            <td>20-02-2024</td>
+                            <td class="text-center">2</td>
                             <td class="text-center">
-                              <button type="button" class="btn btn-outline-secondary" onclick="confirmarRecuperacion()">
-                                Recuperar
-                              </button>
-                            </td>
+                                <a href="{{ route('VistaLicencia') }}">
+                                    <i class="fa-solid fa-eye fa-lg"></i>
+                                </a>
+                            </td>                                   
                         </tr>
                     </tbody>
                 </table>
@@ -61,8 +80,9 @@
                   </ul>
                 </nav>
               </div>
+              
         </div>
     </div>
 </main>
-
-@endsection   
+@endsection
+           

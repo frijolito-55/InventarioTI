@@ -91,10 +91,10 @@
                         </a>
                         <ul id="licencia" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="{{ route ('Licencias')}}" class="sidebar-link">Control de Licencias</a>
+                                <a href="{{ route ('Licencias')}}" class="sidebar-link">Administrador de Licencias</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">op</a>
+                                <a href="{{ route ('Asignados')}}" class="sidebar-link">Asignados</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">op</a>
@@ -153,6 +153,11 @@
             @yield('ReportePrestamo') @section('ReportePrestamo')
             @yield('SinAsignar') @section('SinAsignar')
             @yield('Licencias') @section('Licencias')
+            @yield('CrearLicencia') @section('CrearLicencia')
+            @yield('ControlLicencia') @section('ControlLicencia')
+            @yield('Asignados') @section('Asignados')
+            @yield('VistaLicencia') @section('VistaLicencia')
+
             <a href="#" class="theme-toggle">
                 <i class="fa-regular fa-moon"></i>
                 <i class="fa-regular fa-sun"></i>
@@ -176,6 +181,7 @@
     <script src="{{ asset('js/prueba.js') }}"></script>
     <script src=" {{ asset('js/asignarequipo.js') }}"></script>
     <script src="{{ asset ('js/date.js') }}"></script>
+    <script src="{{ asset ('js/alertas.js')}}"></script>
 
 </body>
 

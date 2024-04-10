@@ -64,9 +64,19 @@ class AuthController extends Controller
     //RUTAS DE LICENCIAS
     public function Licencias(){
         return view('auth.Licencias');
+
     }
     public function CrearLicencia(){
         return view('auth.CrearLicencia');
+    }
+    public function ControlLicencia(){
+        return view('auth.ControlLicencia');
+    }
+    public function Asignados(){
+        return view('auth.Asignados');
+    }
+    public function VistaLicencia(){
+        return view('auth.VistaLicencia');
     }
     //CONTROL EQUIPOS
     public function ControlEquipo(){
@@ -93,5 +103,6 @@ class AuthController extends Controller
     public function ActualizarPrestamo(){
         return view('auth.ActualizarPrestamo');
     }
+
 
 }

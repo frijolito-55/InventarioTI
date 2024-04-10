@@ -156,7 +156,7 @@
                                     <td>CN0R289D7161884NFLFU</td>
                                     <td class="button-column text-center">
                                         <a class="baja" title="Baja" rel="tooltip" href="#">
-                                            <i class="fa-solid fa-trash"></i>
+                                          <i class="fa-solid fa-trash"></i>
                                         </a>
                                     </td>
                                 </tr>
