@@ -16,7 +16,8 @@
         <div class="container main">
             <div class="row">
                 <div class="col-md-6 side-image">
-                    <img src="{{ asset ('img/icono.png')}}" alt="">
+                    <!-------------IMAGEN------------->
+                    <img src="{{ asset ('img/logo.png')}}" alt="">
                 </div>
                 <div class="col-md-6 right">
                     <div class="input-box">

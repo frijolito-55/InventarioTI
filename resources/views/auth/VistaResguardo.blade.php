@@ -47,77 +47,86 @@
                     @endforeach
 
                     <td class="text-center">
-                        <a href="#" onclick="mostrarTablaFlotante()" style="display: inline-block">
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
                             <i class="fa-solid fa-computer fa-2x" style="margin-right: 10px; vertical-align: middle;"></i>
                         </a>
                     </td>
                     <td class="text-center">
-                        <a href="#" style="display: inline-block;">
+                        <a href="{{ route ('ActualizarResguardo')}}" style="display: inline-block;">
                             <i class="fa-solid fa-pencil fa-2x" style="margin-right: 5px; vertical-align: middle;"></i>
                         </a>
                     </td>
                     <!--TABLA FLOTANTE-->
-                    <div id="tablaFlotante"
-                        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; border: 1px solid #ccc; padding: 20px; max-width: 80%; max-height: 80%; overflow: auto;">
-                        <h2>ASIGNAR </h2>
-                        <button onclick="ocultarTablaFlotante()">Cerrar</button>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <select class="form-select" aria-label="size 3 select example">
-                                            <option selected>TIPO</option>
-                                            <option value="1">One</option>
-                                        </select>
-                                    </th>
-                                    <th scope="col">
-                                        <select class="form-select" aria-label="size 3 select example">
-                                            <option selected>MARCA</option>
-                                            <option value="1">One</option>
-                                        </select>
-                                    </th>
-                                    <th scope="col">
-                                        <select class="form-select" aria-label="size 3 select example">
-                                            <option selected>MODELO</option>
-                                            <option value="1">One</option>
-                                        </select>
-                                    </th>
-                                    <th scope="col">NÚMERO DE SERIE
-                                        <form class="d-flex">
-                                            <input class="form-control form-control-sm me-2" type="search" placeholder=""
-                                                aria-label="Search" style="width: 120px;">
-                                        </form>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>CPU</td>
-                                    <td>DELL</td>
-                                    <td>OPTIPLEX 780</td>
-                                    <td>F64V484</td>
-                                </tr>
-                                <tr>
-                                    <td>CPU</td>
-                                    <td>DELL</td>
-                                    <td>OPTIPLEX 780</td>
-                                    <td>F64V484</td>
-                                </tr>
-                                <tr>
-                                    <td>CPU</td>
-                                    <td>DELL</td>
-                                    <td>OPTIPLEX 780</td>
-                                    <td>F64V484</td>
-                                </tr>
-                                <tr>
-                                    <td>CPU</td>
-                                    <td>DELL</td>
-                                    <td>OPTIPLEX 780</td>
-                                    <td>F64V484</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Asignar Prestamo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <select class="form-select" aria-label="size 3 select example">
+                                                    <option selected>TIPO</option>
+                                                    <option value="1">One</option>
+                                                </select>
+                                            </th>
+                                            <th scope="col">
+                                                <select class="form-select" aria-label="size 3 select example">
+                                                    <option selected>MARCA</option>
+                                                    <option value="1">One</option>
+                                                </select>
+                                            </th>
+                                            <th scope="col">
+                                                <select class="form-select" aria-label="size 3 select example">
+                                                    <option selected>MODELO</option>
+                                                    <option value="1">One</option>
+                                                </select>
+                                            </th>
+                                            <th scope="col">NÚMERO DE SERIE
+                                                <form class="d-flex">
+                                                    <input class="form-control form-control-sm me-2" type="search" placeholder=""
+                                                        aria-label="Search" style="width: 120px;">
+                                                </form>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CPU</td>
+                                            <td>DELL</td>
+                                            <td>OPTIPLEX 780</td>
+                                            <td>F64V484</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CPU</td>
+                                            <td>DELL</td>
+                                            <td>OPTIPLEX 780</td>
+                                            <td>F64V484</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CPU</td>
+                                            <td>DELL</td>
+                                            <td>OPTIPLEX 780</td>
+                                            <td>F64V484</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CPU</td>
+                                            <td>DELL</td>
+                                            <td>OPTIPLEX 780</td>
+                                            <td>F64V484</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
                     <p>
                     <div style="word-wrap:break-word;" id="equipo" class="grid-view">

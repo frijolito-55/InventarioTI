@@ -1,16 +1,16 @@
 @extends('layouts.Base')
 
-@section('CrearPrestamo')
+@section('ActualizarPrestamo')
 <main class="content px-3 py-2">
     <div class="container-fluid">
         <div class="mb-3">
-            <h4>CREAR NUEVO PRESTAMO</h4>
+            <h4>ACTUALIZAR PRESTAMO</h4>
         </div>
         <!-- Table Element -->
         <div class="card border-0">
             <div class="card-header">
                 <h5 class="card-title">
-                    LOS CAMPOS CON* SON REQUERIDOS.
+                    Actualizar Préstamo del Colaborador LUISA FERNANDA CASTRO MENDOZA
                 </h5>
             </div>
             <div class="card-body">

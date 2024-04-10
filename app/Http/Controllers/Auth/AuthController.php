@@ -75,7 +75,13 @@ class AuthController extends Controller
     public function VistaPrestamo(){
         return view ('auth.VistaPrestamo');
     }
-
+    public function ResponsivaPrestamo(){
+        return view ('auth.ResponsivaPrestamo');
+    }
+    //ESTE ES PRESTAMO DE EQUIPOS
+    public function Prestamo(){
+        return view('auth.Prestamo');
+    }
     //ESTE ES REPORTES DE PRESTAMOS
     public function ReportePrestamo(){
         return view('auth.ReportePrestamo');
@@ -88,9 +94,25 @@ class AuthController extends Controller
     }
     //RUTAS DE LICENCIAS
     public function Licencias(){
-        return view('');
-    }
+        return view('auth.Licencias');
 
+    }
+    public function CrearLicencia(){
+        return view('auth.CrearLicencia');
+    }
+    public function ControlLicencia(){
+        return view('auth.ControlLicencia');
+    }
+    public function Asignados(){
+        return view('auth.Asignados');
+    }
+    public function VistaLicencia(){
+        return view('auth.VistaLicencia');
+    }
+    //CONTROL EQUIPOS
+    public function ControlEquipo(){
+        return view('auth.ControlEquipo');
+    }
     public function ActualizarControl(){
         return view('auth.ActualizarControl');
     }
@@ -107,7 +129,12 @@ class AuthController extends Controller
     public function AsignarEquipo(){
         return view('auth.AsignarEquipo');
     }
-
+    public function ActualizarResguardo(){
+        return view('auth.ActualizarResguardo');
+    }
+    public function ActualizarPrestamo(){
+        return view('auth.ActualizarPrestamo');
+    }
 
 
 }
