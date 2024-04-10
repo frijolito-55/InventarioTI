@@ -22,3 +22,14 @@ $(document).ready(function(){
       alert("Operación cancelada");
     }
   }
+
+  //ALERTA DE CERRA SESION
+  function confirmarSalida() {
+    if (confirm("¿Estás seguro de que quieres salir?")) {
+      // Aquí puedes agregar la lógica para salir
+      alert("Sesión cerrada correctamente");
+    } else {
+      // Otra acción si se cancela la salida
+      alert("Operación cancelada");
+    }
+  }

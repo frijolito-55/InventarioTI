@@ -17,15 +17,32 @@
                 <table class="table">
                     <div class="row">
                         <div class="col-3">
+                            <!-- Contenido del elemento derecho -->
+                            <label class="visually-hidden" for="autoSizingSelect">DEPARTAMENTO</label>
+                            <select class="form-select" id="autoSizingSelect">
+                                <option selected>DEPARTAMENTO</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
                             <form class="d-flex">
                                 <input class="form-control form-control-sm me-2"
                                 type="search" placeholder="NOMBRE DE LA LICENCIA" aria-label="Search" style="width: 220px, 
                                 height 150px">
                             </form>
+                        </div>
+                        <div class="col-4">
+                            <form class="d-flex">
+                                <input class="form-control form-control-sm me-2"
+                                type="text-number" placeholder="CODIGO DE LICENCIA" aria-label="Search" style="width: 220px, 
+                                height 150px">
+                            </form>
                         </div> 
                     </div>
                     <div class="row mt-3">
-                        <div class="col-3">
+                        <div class="col-4">
                             <form class="d-flex">
                                 <input id="fechaPrestamo" class="form-control form-control-sm me-2"
                                 type="search" placeholder="FECHA DE COMPRA" aria-label="Search" style="width: 220px, 
@@ -39,12 +56,7 @@
                             </form>
                         </div>            
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-3">
-                            <label for="inputAddress" class="form-label">CANTIDAD DE LICENCIAS</label>
-                            <input type="number" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                          </div>
-                    </div>
+                   
                     <div class="col-auto mt-3">
                         <button type="submit" class="btn btn-success">GUARDAR</button>
                     </div>
