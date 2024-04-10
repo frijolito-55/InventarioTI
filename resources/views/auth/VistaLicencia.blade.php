@@ -18,24 +18,31 @@
         <div class="card border-0">
             <div class="card-body">
                 <table class="table table-striped">
+                    <tr class="odd">
+                        <tr class="even">
+                            <th>Nombre del usuario</th>
+                            <td>REYNALDA HERNANDEZ ZAMUDIO</td>
+                        </tr>
                     <tr class="even">
                         <th>Nombre Equipo</th>
                         <td>REHERNANDEZ</td>
                     </tr>
                     <tr class="even">
-                        <th>Nombre del usuario</th>
-                        <td>REYNALDA HERNANDEZ ZAMUDIO</td>
+                        <th>Departamento</th>
+                        <td>Desarrollo</td>
                     </tr>
+                    <th>Fecha de Asignación</th>
+                    <td>2024-01-30</td>
+                </tr>
+                <tr class="even">
+                    <th>Fecha de Vencimiento</th>
+                    <td>2024-06-30</td>
+                </tr>
                     </tbody>
                 </table>
                 <td class="text-center">
                     <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
                         <i class="fa-solid fa-computer fa-2x" style="margin-right: 10px; vertical-align: middle;"></i>
-                    </a>
-                </td>
-                <td class="text-center">
-                    <a href="{{ route ('ActualizarResguardo')}}" style="display: inline-block;">
-                        <i class="fa-solid fa-pencil fa-2x" style="margin-right: 5px; vertical-align: middle;"></i>
                     </a>
                 </td>
                 <!--TABLA FLOTANTE-->
@@ -44,7 +51,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Asignar Prestamo</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">Asignar Licencias</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
@@ -52,56 +59,31 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">
+                                        <th scope="col-6">
                                             <select class="form-select" aria-label="size 3 select example">
-                                                <option selected>TIPO</option>
+                                                <option selected>DEPARTAMENTO</option>
                                                 <option value="1">One</option>
                                             </select>
                                         </th>
-                                        <th scope="col">
+                                        <th scope="col-6">
                                             <select class="form-select" aria-label="size 3 select example">
-                                                <option selected>MARCA</option>
+                                                <option selected>LICENCIA</option>
                                                 <option value="1">One</option>
                                             </select>
                                         </th>
-                                        <th scope="col">
+                                        <th scope="col-8">
                                             <select class="form-select" aria-label="size 3 select example">
-                                                <option selected>MODELO</option>
+                                                <option selected>CODIGO DE LICENCIA</option>
                                                 <option value="1">One</option>
                                             </select>
-                                        </th>
-                                        <th scope="col">NÚMERO DE SERIE
-                                            <form class="d-flex">
-                                                <input class="form-control form-control-sm me-2" type="search" placeholder=""
-                                                    aria-label="Search" style="width: 120px;">
-                                            </form>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>CPU</td>
-                                        <td>DELL</td>
-                                        <td>OPTIPLEX 780</td>
-                                        <td>F64V484</td>
-                                    </tr>
-                                    <tr>
-                                        <td>CPU</td>
-                                        <td>DELL</td>
-                                        <td>OPTIPLEX 780</td>
-                                        <td>F64V484</td>
-                                    </tr>
-                                    <tr>
-                                        <td>CPU</td>
-                                        <td>DELL</td>
-                                        <td>OPTIPLEX 780</td>
-                                        <td>F64V484</td>
-                                    </tr>
-                                    <tr>
-                                        <td>CPU</td>
-                                        <td>DELL</td>
-                                        <td>OPTIPLEX 780</td>
-                                        <td>F64V484</td>
+                                        <td>Inmobiliaria</td>
+                                        <td>Auto CAD</td>
+                                        <td>CN0R289D7161884NFLFU	</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -115,11 +97,11 @@
                     <table class="items table table-striped table-bordered table-condensed table-hover">
                         <thead>
                             <tr>
-                                <th>TIPO</th>
-                                <th>MARCA</th>
-                                <th>MODELO</th>
+                                <th>NOMBRE DEL EQUIPO</th>
+                                <th>NOMBRE DE LA LICENCIA</th>
+                                <th>FECHA DE VENCIMIENTO</th>
                                 <th>
-                                    <a>NÚMERO DE SERIE
+                                    <a>CODIGO DE LICENCIA
                                         <span class="caret">
                                         </span>
                                     </a>
@@ -129,10 +111,9 @@
                         </thead>
                         <tbody>
                             <tr class="odd">
-                                <td>MONITOR
-                                </td>
-                                <td>DELL</td>
-                                <td>2208WFP</td>
+                                <td>REHERNANDEZ</td>
+                                <td>AUTO CAD</td>
+                                <td>06-10-2025</td>
                                 <td>CN0R289D7161884NFLFU</td>
                                 <td class="button-column text-center">
                                     <a class="baja" title="Baja" rel="tooltip" href="#">

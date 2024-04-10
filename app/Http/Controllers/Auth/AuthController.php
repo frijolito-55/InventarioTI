@@ -109,6 +109,10 @@ class AuthController extends Controller
     public function VistaLicencia(){
         return view('auth.VistaLicencia');
     }
+    public function EditarLicencia(){
+        return view('auth.EditarLicencia');
+
+    }
     //CONTROL EQUIPOS
     public function ControlEquipo(){
         return view('auth.ControlEquipo');

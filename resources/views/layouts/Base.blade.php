@@ -96,9 +96,6 @@
                             <li class="sidebar-item">
                                 <a href="{{ route ('Asignados')}}" class="sidebar-link">Asignados</a>
                             </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">op</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
@@ -123,10 +120,10 @@
                                 <img src="{{ asset('img/profile.jpg') }}" class="avatar img-fluid rounded"
                                     alt="">
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end">
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                                 <a href="{{ route('contraseña') }}" class="dropdown-item">Cambiar Contraseña</a>
-                                <a href="#" class="dropdown-item">Logout</a>
-                            </div>
+                                <a href="#" class="dropdown-item" onclick="confirmarSalida()">Cerrar Sesión</a>
+                              </div>
                         </li>
                     </ul>
                 </div>
@@ -157,6 +154,7 @@
             @yield('ControlLicencia') @section('ControlLicencia')
             @yield('Asignados') @section('Asignados')
             @yield('VistaLicencia') @section('VistaLicencia')
+            @yield('EditarLicencia') @section('EditarLicencia')
 
             <a href="#" class="theme-toggle">
                 <i class="fa-regular fa-moon"></i>
