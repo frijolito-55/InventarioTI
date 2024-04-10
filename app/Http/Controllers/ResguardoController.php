@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Direccion;
 use App\Models\Departamento;
+use App\Models\equipoGeneral;
 use App\Models\Resguardo;
 use App\Models\Gerencia;
 use App\Models\hotel;
@@ -44,18 +45,22 @@ class ResguardoController extends Controller
 
     public function query()
     {
-        $query = Resguardo::select(
+        $subquery = equipoGeneral::selectRaw('count(*)')
+        ->whereColumn('equipogeneral.resguardo_idresguardo', 'resguardo.id_resguardo')->toSql();
+
+    $query = Resguardo::select(
             'resguardo.id_resguardo',
             'resguardo.nombreEquipo',
             'h.nombreHotel',
             'd.nombredepartamento',
-            Resguardo::raw("CONCAT(c.usuarioNombre, ' ', c.usuarioApellidoPat, ' ', c.usuarioApellidoMat) AS nombreCompleto")
+            Resguardo::raw("CONCAT(c.usuarioNombre, ' ', c.usuarioApellidoPat, ' ', c.usuarioApellidoMat) AS nombreCompleto"),
+            Resguardo::raw("($subquery) as equiposAsignados")
         )
             ->join('colaborador as c', 'resguardo.idColaboradorEmpleado', '=', 'c.id_usuario')
             ->join('hotel as h', 'c.hotel_id', '=', 'h.id')
             ->join('departamento as d', 'c.departamento_iddepartamento', '=', 'd.iddepartamento');
-          
-        return $query;
+
+    return $query;
    }
 }
 

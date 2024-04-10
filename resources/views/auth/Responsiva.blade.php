@@ -72,10 +72,11 @@
                     <thead>
                         <div class="espacio2">
                             <tr>
-                                <th>SANER ROLDAN BALCAZAR VELAZQUEZ</th>
-                                <th>MID</th>
-                                <th>SOPORTE TECNICO</th>
-                                <th>NOMBRE EQUIPO:SABALCAZAR</th>
+                                
+                                <th>{{ $datos['resguardos']->first()->nombreCompleto }}</th>
+                                <th>{{ $datos['resguardosTabla']->first()->nombreHotel }}</th>
+                                <th>{{ $datos['resguardos']->first()->nombredepartamento }}</th>
+                                <th>NOMBRE EQUIPO: {{ $datos['resguardos']->first()->nombreEquipo }}</th>
                             </tr>
                         </div>
                 </table>
@@ -88,34 +89,21 @@
                 <table class="table table-striped table-bordered">
                     <!-- Datos de la tabla -->
                     <tbody>
+                        @foreach($datos['resguardosTabla'] as $dato)
                         <tr>
-                            <td>MONITOR</td>
-                            <td>DELL</td>
-                            <td>2208WFP</td>
-                            <td>No.Serie:</td>
-                            <td>CN0R289D7161884NFLFU</td>
+                            <td>{{$dato->nombreTipoEquipo}}</td>
+                            <td>{{$dato->nombremarca}}</td>
+                            <td>{{$dato->nombremodelo}}</td>
+                            <td>{{$dato->numeroSerie}}</td>
                         </tr>
-                        <tr>
-                            <td>MONITOR</td>
-                            <td>DELL</td>
-                            <td>2208WFP</td>
-                            <td>No.Serie:</td>
-                            <td>CN0R289D7161884NFLFU</td>
-                        </tr>
-                        <tr>
-                            <td>MONITOR</td>
-                            <td>DELL</td>
-                            <td>2208WFP</td>
-                            <td>No.Serie:</td>
-                            <td>CN0R289D7161884NFLFU</td>
-                        </tr>
+                        @endforeach
                         <!-- Agrega más filas según sea necesario -->
                     </tbody>
                 </table>
                 <!--Comentario que segrega al crear el resguardo-->
                 <div class="espacio2">
                     <p style="font-size 14px :small; font-family: sans-serif;">
-                        SE ENTREGA ESCANNER SYMBOL 9209000501858
+                    
                     </p>
                 </div>
                 <div class="espacio2">
@@ -147,10 +135,9 @@
                     <tbody>
                         <div class="espacio">
                             <tr style="height:70;vertical-align:bottom;text-align:center;">
-                                <td width="40%"><span>356</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span
-                                        id="NombreC">REYNALDA
-                                        HERNANDEZ ZAMUDIO</span></td>
-                                <td width="40%"><span>Jose Sanchez</span></td>
+                                <td width="40%"><span>{{ $datos['resguardos']->first()->idColaboradorEmpleado }}</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span
+                                        id="NombreC">{{ $datos['resguardos']->first()->nombreCompleto }}</span></td>
+                                <td width="40%"><span>{{ $datos['nombreUsuario']}}</span></td>
                             </tr>
                             <tr>
                                 <td align="center" style="border-top:2px solid #dddddd;">Firma del Colaborador</td>
@@ -166,7 +153,7 @@
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
             <div style="position:absolute; bottom:0;">
-                <span><strong>Fecha: </strong> 27-03-2024</span>
+                <span><strong>Fecha: </strong><?php echo date("d-m-Y"); ?></span>
             </div>
 </body>
 

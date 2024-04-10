@@ -7,22 +7,6 @@ $(document).ready(function(){
         obtenerDatosFiltrados(); // Llamar a la función para obtener datos filtrados
     });
 });
-
-function obtenerDatos() {
-    $.ajax({
-        url: 'mostrarDatosResguardo',
-        type: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            llenarSelectores(data); // Llenar selectores con datos por defecto
-            llenarTabla(data.equipos); // Llenar tabla con datos por defecto
-        },
-        error: function(xhr, status, error) {
-            console.error('Error al obtener los datos:', error);
-        }
-    });
-}
-
 function obtenerDatosFiltrados() {
     // Obtener valores seleccionados en los selectores
     var selectHotel = $('#hotelSelected').val();
@@ -30,7 +14,7 @@ function obtenerDatosFiltrados() {
 
      //Realizar solicitud AJAX con los parámetros de filtrado
     $.ajax({
-        url: 'mostrarDatosResguardo',
+        url: 'PrestamoTable',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -68,7 +52,20 @@ function llenarSelectores(data) {
         }));
     });
 }
-
+function obtenerDatos() {
+    $.ajax({
+        url: 'PrestamoTable',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            llenarSelectores(data); // Llenar selectores con datos por defecto
+            llenarTabla(data.equipos); // Llenar tabla con datos por defecto
+        },
+        error: function(xhr, status, error) {
+            console.error('Error al obtener los datos:', error);
+        }
+    });
+}
 function llenarTabla(equipos) {
     // Limpiar tabla antes de agregar nuevos datos
     $('#contenido').empty();
@@ -80,10 +77,11 @@ function llenarTabla(equipos) {
             <td>${equipo.nombreHotel}</td>
             <td>${equipo.nombredepartamento}</td>
             <td>${equipo.nombreCompleto}</td>
-            <td>${equipo.nombreEquipo}</td>
+            <td>${equipo.fecha_prestamo}</td>
+            <td>${equipo.fecha_devolucion}</td>
             <td>${equipo.equiposAsignados}</td>
             <td class="text-center">
-                <a href="#" class="ver-resguardo" data-id="${equipo.id_resguardo}">
+                <a href="#" class="ver-prestamo" data-id="${equipo.id}">
                     <i class="fa-solid fa-eye fa-lg"></i>
                 </a>
             </td>
@@ -91,12 +89,10 @@ function llenarTabla(equipos) {
         $('#contenido').append(fila);
     });
 }
-
-// Función para manejar el clic en el enlace "ver-resguardo"
-$(document).on('click', '.ver-resguardo', function(e) {
+// Función para manejar el clic en el enlace "ver-prestamo"
+$(document).on('click', '.ver-prestamo', function(e) {
     e.preventDefault(); // Evitar que el enlace siga su URL por defecto
     var idEquipo = $(this).data('id');
-    // Redirigir a la vista VistaResguardo
-    window.location.href = urlVistaResguardo + '?id=' + idEquipo;
+    // Redirigir a la vista Vistaprestamo
+    window.location.href = urlVistaPrestamo + '?id=' + idEquipo;
 });
-

@@ -23,18 +23,15 @@ Route::get('/contraseña', 'App\Http\Controllers\Auth\AuthController@contraseña
 Route::get('/ControlEquipo', 'App\Http\Controllers\controlEquipo@ControlEquipo')->name('ControlEquipo');
 Route::get('/filtrar', 'App\Http\Controllers\controlEquipo@filtrar')->name('filtrar');
 Route::get('/CapturaInventario', 'App\Http\Controllers\Auth\AuthController@CapturaInventario')->name('CapturaInventario');
-
 Route::get('/TransferenciaHotel', 'App\Http\Controllers\TransferenciaController@TransferenciaHotel')->name('TransferenciaHotel');
 Route::get('/TansferenciaFiltrar', 'App\Http\Controllers\TransferenciaController@TansferenciaFiltrar')->name('TansferenciaFiltrar');
-
-
 Route::get('/AceptarTransferencia', 'App\Http\Controllers\AceptarTransferencia@AceptarTransferencia')->name('AceptarTransferencia');
 Route::get('/DevolverDatos', 'App\Http\Controllers\AceptarTransferencia@DevolverDatos')->name('DevolverDatos');
-
 Route::get('/Resguardo', 'App\Http\Controllers\ResguardoController@Resguardo')->name('Resguardo');
 Route::get('/VistaResguardo', 'App\Http\Controllers\VistaResguardoController@VistaResguardo')->name('VistaResguardo');
+Route::get('/Prestamo', 'App\Http\Controllers\PrestamosController@Prestamo')->name('Prestamo');
+Route::get('/PrestamoTable', 'App\Http\Controllers\PrestamosController@PrestamoTable')->name('PrestamoTable');
 
-Route::get('/Prestamo', 'App\Http\Controllers\Auth\AuthController@Prestamo')->name('Prestamo');
 Route::get('/ReportePrestamo', 'App\Http\Controllers\Auth\AuthController@ReportePrestamo')->name('ReportePrestamo');
 Route::get('/ReporteResguardo', 'App\Http\Controllers\Auth\AuthController@ReporteResguardo')->name('ReporteResguardo');
 Route::get('/SinAsignar', 'App\Http\Controllers\Auth\AuthController@SinAsignar')->name('SinAsignar');
@@ -42,9 +39,8 @@ Route::get('/CrearResguardo', 'App\Http\Controllers\Auth\AuthController@CrearRes
 Route::get('/CrearPrestamo', 'App\Http\Controllers\Auth\AuthController@CrearPrestamo')->name('CrearPrestamo');
 Route::get('/AgregarUsuario', 'App\Http\Controllers\Auth\AuthController@AgregarUsuario')->name('AgregarUsuario');
 Route::get('/VistaPrestamo', 'App\Http\Controllers\Auth\AuthController@VistaPrestamo')->name('VistaPrestamo');
-Route::get('/Responsiva', 'App\Http\Controllers\Auth\AuthController@Responsiva')->name('Responsiva');
+Route::get('/Responsiva', 'App\Http\Controllers\ResponsivaController@Responsiva')->name('Responsiva');
 Route::get('/mostrarDatosResguardo', 'App\Http\Controllers\ResguardoController@mostrarDatosResguardo')->name('mostrarDatosResguardo');
-
 Route::get('/ActualizarControl', 'App\Http\Controllers\Auth\AuthController@ActualizarControl')->name('ActualizarControl');
 Route::get('/AsignarEquipo', 'App\Http\Controllers\Auth\AuthController@AsignarEquipo')->name('AsignarEquipo');
 

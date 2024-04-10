@@ -39,7 +39,6 @@ class AuthController extends Controller
 
 
         return view('auth.dashboard', ['prestamos' => $prestamos]);
-       // return view('auth.dashboard');
     }
 
     public function verify(Request $request)
@@ -56,6 +55,7 @@ class AuthController extends Controller
 
         if (!empty($credentials['password']) && $user && $user->getPlainTextPassword()) {
             if ($credentials['password'] == $user->getPlainTextPassword()) {
+                $request->session()->put('nombre_usuario', $user->nombre);
                 return redirect()->route('auth.dashboard');
             } else {
                 // Las contraseñas no coinciden, manejar el error aquí
@@ -75,10 +75,7 @@ class AuthController extends Controller
     public function VistaPrestamo(){
         return view ('auth.VistaPrestamo');
     }
-    //ESTE ES PRESTAMO DE EQUIPOS
-    public function Prestamo(){
-        return view('auth.Prestamo');
-    }
+
     //ESTE ES REPORTES DE PRESTAMOS
     public function ReportePrestamo(){
         return view('auth.ReportePrestamo');
@@ -93,10 +90,7 @@ class AuthController extends Controller
     public function Licencias(){
         return view('');
     }
-    //CONTROL EQUIPOS
-    public function ControlEquipo(){
-        return view('auth.ControlEquipo');
-    }
+
     public function ActualizarControl(){
         return view('auth.ActualizarControl');
     }
@@ -113,9 +107,7 @@ class AuthController extends Controller
     public function AsignarEquipo(){
         return view('auth.AsignarEquipo');
     }
-    public function Responsiva(){
-        return view('auth.Responsiva');
-    }
+
 
 
 }

@@ -9,8 +9,9 @@
             <!-- Table Element -->
             <div class="card border-0">
                 <div class="card-header">
+                    @foreach ($datos['resguardos'] as $dato)
                     <h5 class="card-title">
-                        RESGUARDO DE REYNALDA HERNANDEZ ZAMUDIO
+                        RESGUARDO DE {{$dato->nombreCompleto}}
                     </h5>
                 </div>
 
@@ -18,29 +19,32 @@
             <div class="card border-0">
                 <div class="card-body">
                     <table class="table table-striped">
+                        
+
                         <tr class="odd">
                             <th>Comentarios</th>
-                            <td>SE ENTREGA ESCANNER SYMBOL 9209000501858</td>
+                            <td>{{$dato->comentarios}}</td>
                         </tr>
                         <tr class="even">
                             <th>Nombre Equipo</th>
-                            <td>REHERNANDEZ</td>
+                            <td>{{$dato->nombreEquipo}}</td>
                         </tr>
                         <tr class="odd">
                             <th>Captura User</th>
-                            <td>18</td>
+                            <td>{{$dato->capturauser}}</td>
                         </tr>
                         <tr class="even">
                             <th>Nombre del usuario</th>
-                            <td>REYNALDA HERNANDEZ ZAMUDIO</td>
+                            <td>{{$dato->nombreCompleto}}</td>
                         </tr>
-                        </tbody>
+                        
                     </table>
                     <td class="text-center">
-                        <a href="{{ route('Responsiva') }}" style="display: inline-block;">
+                        <a href="{{ route('Responsiva', ['id' => $dato['id_resguardo']]) }}" style="display: inline-block;">
                             <i class="fa-solid fa-print fa-2x" style="margin-right: 5px; vertical-align: middle;"></i>
                         </a>
                     </td>
+                    @endforeach
 
                     <td class="text-center">
                         <a href="#" onclick="mostrarTablaFlotante()" style="display: inline-block">
@@ -133,18 +137,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="odd">
-                                    <td>MONITOR
-                                    </td>
-                                    <td>DELL</td>
-                                    <td>2208WFP</td>
-                                    <td>CN0R289D7161884NFLFU</td>
+                                @foreach($datos['resguardosTabla'] as $dato)
+                                <tr>
+                                    <td>{{$dato->nombreTipoEquipo}}</td>
+                                    <td>{{$dato->nombremarca}}</td>
+                                    <td>{{$dato->nombremodelo}}</td>
+                                    <td>{{$dato->numeroSerie}}</td>
                                     <td class="button-column text-center">
                                         <a class="baja" title="Baja" rel="tooltip" href="#">
                                             <i class="fa-solid fa-trash"></i>
                                         </a>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         </table>
