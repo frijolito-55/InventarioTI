@@ -38,7 +38,7 @@ Route::get('/SinAsignar', 'App\Http\Controllers\Auth\AuthController@SinAsignar')
 Route::get('/CrearResguardo', 'App\Http\Controllers\Auth\AuthController@CrearResguardo')->name('CrearResguardo');
 Route::get('/CrearPrestamo', 'App\Http\Controllers\Auth\AuthController@CrearPrestamo')->name('CrearPrestamo');
 Route::get('/AgregarUsuario', 'App\Http\Controllers\Auth\AuthController@AgregarUsuario')->name('AgregarUsuario');
-Route::get('/VistaPrestamo', 'App\Http\Controllers\Auth\AuthController@VistaPrestamo')->name('VistaPrestamo');
+Route::get('/VistaPrestamo', 'App\Http\Controllers\VistaPrestamoController@VistaPrestamo')->name('VistaPrestamo');
 Route::get('/Responsiva', 'App\Http\Controllers\ResponsivaController@Responsiva')->name('Responsiva');
 Route::get('/mostrarDatosResguardo', 'App\Http\Controllers\ResguardoController@mostrarDatosResguardo')->name('mostrarDatosResguardo');
 Route::get('/ActualizarControl', 'App\Http\Controllers\Auth\AuthController@ActualizarControl')->name('ActualizarControl');
