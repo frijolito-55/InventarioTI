@@ -49,7 +49,11 @@
                                 }
                             @endphp
                             </td>
-                            <td><button type="button" class="btn btn-outline-secondary">Recuoerar</button></td>
+                            <td class="text-center">
+                              <button type="button" class="btn btn-outline-secondary" onclick="confirmarRecuperacion()">
+                                Recuperar
+                              </button>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
