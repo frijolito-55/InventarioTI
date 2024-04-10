@@ -62,7 +62,7 @@
                         </tr>
                     </thead>
                     <!--ACA ESTA EL EJEMPLO DE COMO SE VERA LA TABLA-->
-                    <tbody id="contenido">
+                    <tbody id="">
                         <tr>
                             <td>CEDIS</td>
                             <td>CPU</td>
