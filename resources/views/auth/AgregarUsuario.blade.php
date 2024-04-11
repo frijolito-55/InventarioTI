@@ -4,13 +4,13 @@
 <main class="content px-3 py-2">
     <div class="container-fluid">
         <div class="mb-3">
-            <h4> Agregar Usuario</h4>
+            <h4>Administrador</h4>
         </div>
         <!-- Table Element -->
         <div class="card border-0">
             <div class="card-header">
                 <h5 class="card-title">
-                    Los Campos deben Ser Rellenado
+                    Agregar Usuario
                 </h5>
             </div>
             <div class="card borde-0">

@@ -136,6 +136,9 @@ class AuthController extends Controller
     public function ActualizarPrestamo(){
         return view('auth.ActualizarPrestamo');
     }
+    public function Administrador(){
+        return view('auth.Administrador');
+    }
 
 
 }

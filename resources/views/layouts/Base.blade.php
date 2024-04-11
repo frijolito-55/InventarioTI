@@ -99,10 +99,21 @@
                         </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="{{ route ('AgregarUsuario') }}" class="sidebar-link">
-                            <i class="fa-solid fa-user"></i>
-                            Agregar Usuario
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#administrador"
+                            data-bs-toggle="collapse" aria-expanded="false"><i class="fa-solid fa-user"></i>
+                            Administrador
                         </a>
+                        <ul id="administrador" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="{{ route ('AgregarUsuario') }}" class="sidebar-link">
+                                    <i class=""></i>
+                                    Agregar Usuario
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ route ('Administrador')}}" class="sidebar-link">Usuarios-TI</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -155,6 +166,8 @@
             @yield('Asignados') @section('Asignados')
             @yield('VistaLicencia') @section('VistaLicencia')
             @yield('EditarLicencia') @section('EditarLicencia')
+            @yield('Administrador') @section('Administrador')
+
 
             <a href="#" class="theme-toggle">
                 <i class="fa-regular fa-moon"></i>
