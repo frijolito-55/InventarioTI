@@ -52,6 +52,7 @@ Route::get('/CrearLicencia', 'App\Http\Controllers\Auth\AuthController@CrearLice
 Route::get('/Asignados', 'App\Http\Controllers\Auth\AuthController@Asignados')->name('Asignados');
 Route::get('/VistaLicencia', 'App\Http\Controllers\Auth\AuthController@VistaLicencia')->name('VistaLicencia');
 Route::get('/EditarLicencia', 'App\Http\Controllers\Auth\AuthController@EditarLicencia')->name('EditarLicencia');
+Route::get('/Administrador', 'App\Http\Controllers\Auth\AuthController@Administrador')->name('Administrador');
 
 
 

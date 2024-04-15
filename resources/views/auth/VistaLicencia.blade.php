@@ -42,7 +42,7 @@
                 </table>
                 <td class="text-center">
                     <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
-                        <i class="fa-solid fa-computer fa-2x" style="margin-right: 10px; vertical-align: middle;"></i>
+                        <i class="fa-solid fa-id-card fa-2x" style="margin-right: 10px; vertical-align: middle;"></i>
                     </a>
                 </td>
                 <!--TABLA FLOTANTE-->
