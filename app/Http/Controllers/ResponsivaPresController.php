@@ -6,37 +6,39 @@ use App\Models\equipoGeneral;
 use App\Models\Prestamo;
 use Illuminate\Http\Request;
 
-class VistaPrestamoController extends Controller
+class ResponsivaPresController extends Controller
 {
     //
-    public function VistaPrestamo(Request $request){
-        
-        $datosQ= $this->query($request);
-        $responseDatos = $datosQ->get();
+    public function ResponsivaPrestamo(Request $request){
+        $nombreUsuario = $request->session()->get('nombre_usuario');
+        $consulta = $this->query($request);
+        $resguardo = $this->queryRes($request);
 
-        $tabla= $this->queryRes($request);
-        $requestTabla = $tabla->get();
+        // Ejecuta la consulta y obtén los resultados
+        $resguardos = $consulta->get();
+        $resguardosTabla = $resguardo->get();
 
         $datos = [
-            'responseDatos' => $responseDatos,
-            'requestTabla'=> $requestTabla
-        ];
-        //return response()->json($datos);
+            'nombreUsuario' => $nombreUsuario,
+           'resguardos' => $resguardos,
+           'resguardosTabla' => $resguardosTabla
+       ];
+       //return response()->json($datos);
 
-        return view ('auth.VistaPrestamo', ['datos' => $datos]);
+    return view('auth.ResponsivaPrestamo', ['datos' => $datos]);
     }
     public function query(Request $request){
-
+        
         $id= $request->query('id');
         $query = Prestamo::select(
             'prestamos.id',
+            'prestamos.idColaboradorEmpleado',
             'prestamos.proroga',
             'fecha_prestamo',
             'fecha_devolucion',
             'd.nombredepartamento',
             'prestamos.descripcion',
             'h.nombreHotel',
-            
             
             Prestamo::raw("CONCAT(c.usuarioNombre, ' ', c.usuarioApellidoPat, ' ', c.usuarioApellidoMat) AS nombreCompleto"),
         )
@@ -64,8 +66,6 @@ class VistaPrestamoController extends Controller
         ->join('modelo AS md', 'equipoGeneral.idModelo', '=', 'md.idModelo')
         ->join('colaborador as c', 'p.idColaboradorEmpleado', '=', 'c.numeroColaborador')
         ->where('idPrestamo', $idEquipoRes);
-            
-
         return $query;
     }
 }
