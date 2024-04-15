@@ -72,9 +72,6 @@ class AuthController extends Controller
         return view('auth.CapturaInventario');
     }
 
-    public function ResponsivaPrestamo(){
-        return view ('auth.ResponsivaPrestamo');
-    }
     //ESTE ES PRESTAMO DE EQUIPOS
     public function Prestamo(){
         return view('auth.Prestamo');

@@ -9,8 +9,9 @@
             <!-- Table Element -->
             <div class="card border-0">
                 <div class="card-header">
+                    @foreach ($datos['responseDatos'] as $dato)
                     <h5 class="card-title">
-                        Prestamos de LUISA FERNANDA CASTRO MENDOZA
+                        Prestamos de {{$dato->nombreCompleto}}
                     </h5>
                 </div>
 
@@ -20,33 +21,34 @@
                     <table class="table table-striped">
                         <tr class="odd">
                             <th>Fecha Prestamo</th>
-                            <td>2024-01-30</td>
+                            <td>{{$dato->fecha_prestamo}}</td>
                         </tr>
                         <tr class="even">
                             <th>Fecha Devolución</th>
-                            <td>2024-06-30</td>
+                            <td>{{$dato->fecha_devolucion}}</td>
                         </tr>
                         <tr class="odd">
-                            <th>Prorroga</th>
-                            <td>0</td>
+                            <th>prorroga</th>
+                            <td>{{$dato->proroga}}</td>
                         </tr>
                         <tr class="even">
                             <th>Nombre</th>
-                            <td>LUISA FERNANDA CASTRO MENDOZA</td>
+                            <td>{{$dato->nombreCompleto}}</td>
                         </tr>
                         <tr class="even">
                             <th>Descripción</th>
-                            <td>FTEPODER</td>
+                            <td>{{$dato->descripcion}}</td>
                         </tr>
                         <td>CAPTURA DE EQUIPO</td>
-
+                        
                         </tbody>
                     </table>
                     <td class="text-center">
-                        <a href="{{ route('ResponsivaPrestamo') }}" style="display: inline-block;">
+                        <a href="{{ route('ResponsivaPrestamo', ['id' => $dato['id']])}}" style="display: inline-block;">
                             <i class="fa-solid fa-print fa-2x" style="margin-right: 5px; vertical-align: middle;"></i>
                         </a>
                     </td>
+                    @endforeach
                     <td class="text-center">
                         <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
                             <i class="fa-solid fa-computer fa-2x" style="margin-right: 10px; vertical-align: middle;"></i>
@@ -148,18 +150,19 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($datos['requestTabla'] as $dato)
                                 <tr class="odd">
-                                    <td>MONITOR
-                                    </td>
-                                    <td>DELL</td>
-                                    <td>2208WFP</td>
-                                    <td>CN0R289D7161884NFLFU</td>
+                                    <td>{{$dato->nombreTipoEquipo}}</td>
+                                    <td>{{$dato->nombremarca}}</td>
+                                    <td>{{$dato->nombreModelo}}</td>
+                                    <td>{{$dato->numeroSerie}}</td>
                                     <td class="button-column text-center">
                                         <a class="baja" title="Baja" rel="tooltip" href="#">
                                           <i class="fa-solid fa-trash"></i>
                                         </a>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         </table>
