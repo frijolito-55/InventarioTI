@@ -1,0 +1,18 @@
+Sistema de Invenatario TI
+
+El principio de este proyecto fue realizo hace unos años con un frameowrk poco concido el cual se llama YII 
+por un solo practicante, con el tiempo llegaron nuevas perSonas a realizar cambios en el Sistema.
+
+Nosotros se nos proporciono el codigo y la BD de dicho sistema, lo cual fue muy complejo de comprender por lo que optamos
+en realizar un anilisis de la BD y buscar herramientas mas modernas sin perder la esencia del Sistema, ahora esta echo 
+con un frameowrk concido como laravel. Lo que realizamos fue una recreacion de todo el sitema tanto Front-end y Backend
+desde cero.
+Las herramientas utilizadas fueron:
+Laravel
+JavaScrip 
+Boostrap5
+Node.js
+Composer
+
+
+
