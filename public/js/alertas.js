@@ -1,4 +1,4 @@
-//ALERTA DE ALIMINAR PRESTAMOS Y RESGUARDOS
+//ALERTA DE ALIMINAR RESGUARDOS
 $(document).ready(function(){
     $('.baja').click(function(e){
       e.preventDefault(); // Evita que el enlace se siga al hacer clic
@@ -33,3 +33,14 @@ $(document).ready(function(){
       alert("Operación cancelada");
     }
   }
+
+  //ALERTA ASIGNACION DE EQUIPOS
+  function AsignarResguardo() {
+    if (confirm("¿Estás seguro de que quiere asignar este equipo?")) {
+      // Aquí puedes agregar la lógica para recuperar el elemento
+      alert("Se agrego correctante");
+    } else {
+      alert("Operación cancelada");
+    }
+  }
+

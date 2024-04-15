@@ -53,6 +53,9 @@ Route::get('/Asignados', 'App\Http\Controllers\Auth\AuthController@Asignados')->
 Route::get('/VistaLicencia', 'App\Http\Controllers\Auth\AuthController@VistaLicencia')->name('VistaLicencia');
 Route::get('/EditarLicencia', 'App\Http\Controllers\Auth\AuthController@EditarLicencia')->name('EditarLicencia');
 Route::get('/Administrador', 'App\Http\Controllers\Auth\AuthController@Administrador')->name('Administrador');
+//prueba de la tabla de asignacion
+Route::get('/xd', 'App\Http\Controllers\flotcontroller@xd')->name('xd');
+
 
 
 

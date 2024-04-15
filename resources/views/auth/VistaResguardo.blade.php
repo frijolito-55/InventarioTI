@@ -59,10 +59,10 @@
                     <!--TABLA FLOTANTE-->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Asignar Prestamo</h5>
+                                <h5 class="modal-title" id="staticBackdropLabel">Asignar Resguardos</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -94,21 +94,14 @@
                                                         aria-label="Search" style="width: 120px;">
                                                 </form>
                                             </th>
+                                            <th scope="col">
+                                                <p>
+                                                    ACCIÓN
+                                                </p>
+                                            </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>CPU</td>
-                                            <td>DELL</td>
-                                            <td>OPTIPLEX 780</td>
-                                            <td>F64V484</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CPU</td>
-                                            <td>DELL</td>
-                                            <td>OPTIPLEX 780</td>
-                                            <td>F64V484</td>
-                                        </tr>
+                                    <tbody id="contenido">
                                         <tr>
                                             <td>CPU</td>
                                             <td>DELL</td>
@@ -126,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                   </div>
 
                     <p>
                     <div style="word-wrap:break-word;" id="equipo" class="grid-view">
@@ -166,4 +159,6 @@
                 </div>
             </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('js/flot.js') }}"></script>
 @endsection
