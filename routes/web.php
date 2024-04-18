@@ -55,6 +55,7 @@ Route::get('/EditarLicencia', 'App\Http\Controllers\Auth\AuthController@EditarLi
 Route::get('/Administrador', 'App\Http\Controllers\Auth\AuthController@Administrador')->name('Administrador');
 //prueba de la tabla de asignacion
 Route::get('/xd', 'App\Http\Controllers\flotcontroller@xd')->name('xd');
+Route::post('/recuperar', 'App\Http\Controllers\Auth\AuthController@recuperar')->name('recuperar');
 
 
 

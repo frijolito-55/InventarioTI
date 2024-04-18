@@ -71,21 +71,20 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">
-                                                <select class="form-select" aria-label="size 3 select example">
-                                                    <option selected>TIPO</option>
-                                                    <option value="1">One</option>
+                                                <select class="form-select" aria-label="size 3 select example" id="selectTipo" name="tipo">
+                                                    <option selected value="">TIPO</option>
                                                 </select>
                                             </th>
                                             <th scope="col">
-                                                <select class="form-select" aria-label="size 3 select example">
-                                                    <option selected>MARCA</option>
-                                                    <option value="1">One</option>
+                                                <select class="form-select" aria-label="size 3 select example" id="selectMarca" name="marca">
+                                                    <option selected value="">MARCA</option>
+                                                    
                                                 </select>
                                             </th>
                                             <th scope="col">
-                                                <select class="form-select" aria-label="size 3 select example">
-                                                    <option selected>MODELO</option>
-                                                    <option value="1">One</option>
+                                                <select class="form-select" aria-label="size 3 select example" id="selectModelo" name="modelos">
+                                                    <option selected value="">MODELO</option>
+                                                    
                                                 </select>
                                             </th>
                                             <th scope="col">NÚMERO DE SERIE

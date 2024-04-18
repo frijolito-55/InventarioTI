@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\equipoGeneral;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\FuncCall;
 use App\Models\Prestamo;
@@ -21,6 +22,28 @@ class AuthController extends Controller
     public function contraseña(){
         return view('auth.contraseña');
     } 
+    public function recuperar(Request $request){
+
+        // Encuentra el préstamo que deseas cambiar
+$prestamo = Prestamo::find($request);
+
+if ($prestamo) {
+    // Cambia el estado del préstamo a "alta"
+    $prestamo->estatus_idEstatus = 2; // Suponiendo que el ID del estado "alta" es 2
+    $prestamo->save();
+
+    // Elimina la entrada correspondiente en la tabla de préstamos
+    $prestamo->delete();
+
+    // Actualiza la referencia en la tabla de equipos generales
+    equipoGeneral::where('idEquipo', $prestamo->idEquipo)
+                ->update(['estatus_idEstatus' => 2]); // Suponiendo que el ID del estado "alta" es 2
+                return redirect()->route('auth.dashboard');
+} else {
+    // Manejar el caso donde el préstamo no fue encontrado
+}
+
+    }
     public function dashboard(){
 
         $prestamos = Prestamo::select(
@@ -72,10 +95,6 @@ class AuthController extends Controller
         return view('auth.CapturaInventario');
     }
 
-    //ESTE ES PRESTAMO DE EQUIPOS
-    public function Prestamo(){
-        return view('auth.Prestamo');
-    }
     //ESTE ES REPORTES DE PRESTAMOS
     public function ReportePrestamo(){
         return view('auth.ReportePrestamo');
@@ -108,9 +127,6 @@ class AuthController extends Controller
 
     }
     //CONTROL EQUIPOS
-    public function ControlEquipo(){
-        return view('auth.ControlEquipo');
-    }
     public function ActualizarControl(){
         return view('auth.ActualizarControl');
     }
